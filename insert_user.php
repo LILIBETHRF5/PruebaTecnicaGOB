@@ -19,7 +19,7 @@ $password = $_POST['password'];
 $email = $_POST['email'];
 $Phone = $_POST['Phone'];
 
-$sql = "INSERT INTO users VALUES('$id','$name','$lastname','$username','$password','$email', '$Phone')";
+$sql = "INSERT INTO users VALUES('$id','$name','$lastname','$username','$email', '$password', '$Phone')";
 $query = mysqli_query($con, $sql);
 
 if($query){

@@ -111,13 +111,13 @@ $query = mysqli_query($con, $sql);
             <tbody>
                 <?php while ($row = mysqli_fetch_array($query)): ?>
                     <tr>
-                        <th><?= $row['id'] ?></th>
-                        <th><?= $row['name'] ?></th>
-                        <th><?= $row['lastname'] ?></th>
-                        <th><?= $row['username'] ?></th>
-                        <th><?= $row['password'] ?></th>
-                        <th><?= $row['email'] ?></th>
-                        <th><?= $row['Phone'] ?></th>
+                        <th><?= htmlspecialchars($row['id'])?></th>
+                        <th><?= htmlspecialchars($row['name']) ?></th>
+                        <th><?= htmlspecialchars($row['lastname']) ?></th>
+                        <th><?= htmlspecialchars($row['username']) ?></th>
+                        <th><?= htmlspecialchars($row['password']) ?></th>
+                        <th><?= htmlspecialchars($row['email']) ?></th>
+                        <th><?= htmlspecialchars($row['Phone']) ?></th>
                         <th><a href="update.php?id=<?= $row['id'] ?>" class="btn btn-primary">Editar</a></th>
                         <th><a href="delete_user.php?id=<?= $row['id'] ?>" class="btn btn-danger" >Eliminar</a></th>
                     </tr>
